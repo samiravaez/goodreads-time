@@ -1,0 +1,12 @@
+md5: 05a1d8b399a952296ab87ca4da2fa62b
+frozen: true
+deps:
+- md5: 0c8e5c3cad2ff381c997bcd8eeb4149e
+  size: 47233420
+  hash: md5
+  path: ../../bookdata/goodreads/gr-work-gender.parquet
+outs:
+- md5: 0c8e5c3cad2ff381c997bcd8eeb4149e
+  size: 47233420
+  hash: md5
+  path: gr-work-gender.parquet

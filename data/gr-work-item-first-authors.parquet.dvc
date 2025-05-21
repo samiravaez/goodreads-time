@@ -1,0 +1,12 @@
+md5: 0e11e57467feff990ad4aa34f392d960
+frozen: true
+deps:
+- md5: d6467d88b13f9ea16d98082f7c558353
+  size: 14188783
+  hash: md5
+  path: ../../bookdata/goodreads/gr-work-item-first-authors.parquet
+outs:
+- md5: d6467d88b13f9ea16d98082f7c558353
+  size: 14188783
+  hash: md5
+  path: gr-work-item-first-authors.parquet

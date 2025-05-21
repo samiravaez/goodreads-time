@@ -1,0 +1,12 @@
+md5: 8a640b9530696d8802237de2e73873fd
+frozen: true
+deps:
+- md5: 3a4ae1f872a24830794a3b0c2543f996
+  size: 790840741
+  hash: md5
+  path: ../../bookdata/goodreads/gr-work-ratings.parquet
+outs:
+- md5: 3a4ae1f872a24830794a3b0c2543f996
+  size: 790840741
+  hash: md5
+  path: gr-work-ratings.parquet

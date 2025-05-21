@@ -1,0 +1,12 @@
+md5: d25e6a1bfc2640e4ae562df9ac92f608
+frozen: true
+deps:
+- md5: 850e190dabdeacdb91aaa541d709d8c0
+  size: 782
+  hash: md5
+  path: ../../bookdata/goodreads/gr-genres.parquet
+outs:
+- md5: 850e190dabdeacdb91aaa541d709d8c0
+  size: 782
+  hash: md5
+  path: gr-genres.parquet

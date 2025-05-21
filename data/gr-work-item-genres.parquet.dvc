@@ -1,0 +1,12 @@
+md5: 67ded3a43b611f9c5c3f950b0d3322b6
+frozen: true
+deps:
+- md5: 953b3dc27adb75f5c14e75a6717d2e87
+  size: 12573973
+  hash: md5
+  path: ../../bookdata/goodreads/gr-work-item-genres.parquet
+outs:
+- md5: 953b3dc27adb75f5c14e75a6717d2e87
+  size: 12573973
+  hash: md5
+  path: gr-work-item-genres.parquet

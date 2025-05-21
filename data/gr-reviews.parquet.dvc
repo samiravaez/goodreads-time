@@ -1,0 +1,12 @@
+md5: df07f9b79a995e7dc3645cdb3e478be5
+frozen: true
+deps:
+- md5: 73a5a255d8f0f76e2b1d792850f9203d
+  size: 4485199432
+  hash: md5
+  path: ../../bookdata/goodreads/gr-reviews.parquet
+outs:
+- md5: 73a5a255d8f0f76e2b1d792850f9203d
+  size: 4485199432
+  hash: md5
+  path: gr-reviews.parquet
