@@ -1,0 +1,44 @@
+[project]
+authors = ["Michael Ekstrand <mdekstrand@drexel.edu>"]
+description = "GoodReads temporal data analysis"
+name = "goodreads-time"
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-arm64", "linux-aarch64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "~=3.12.0"
+# lenskit deps
+numpy = ">=1.26"
+pytorch = "~=2.2"
+lenskit = "~=2025.2"
+lenskit-implicit = "*"
+
+# analysis deps
+pandas = "~=2.2"
+plotnine = "~=0.14.0"
+notebook = ">=7"
+jupytext = "~=1.16"
+pyarrow = ">=14"
+pyarrow-stubs = "*"
+zstd = "*"
+zstandard = "~=0.23.0"
+dvc = "~=3.56"
+dvc-s3 = "~=3.0"
+dvc-webdav = "~=3.0"
+dvc-azure = "~=3.0"
+python-duckdb = "~=1.0"
+duckdb-cli = "~=1.0"
+enlighten = "~=1.12"
+humanize = "~=4.11"
+seaborn = "~=0.13.2"
+
+[pypi-dependencies]
+docopt-ng = ">=0.9"
+sandal = "~=0.1.0"
+progress-api = "~=0.1.0"
+manylog = "~=0.1.0"
+# lenskit = "==2025.1.1rc5"
+# lenskit = {git = "https://github.com/mdekstrand/lkpy.git", rev="feature/implicit-faster"}

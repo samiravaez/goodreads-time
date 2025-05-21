@@ -1,0 +1,83 @@
+stages:
+  popular:
+    cmd: python recommender.py --popular
+    deps:
+      - src/scripts/generaterecs.py
+      - recommender.py
+      - data/
+    outs:
+      - outputs/recs/popular/  
+
+  implicitmf:
+    cmd: python recommender.py --implicitmf
+    deps:
+      - src/scripts/generaterecs.py
+      - recommender.py
+      - data/
+    outs:
+      - outputs/recs/implicitmf/   
+
+  itemknn:
+    cmd: python recommender.py --itemknn
+    deps:
+      - src/scripts/generaterecs.py
+      - recommender.py
+      - data/
+    outs:
+      - outputs/recs/itemknn/
+
+  bpr:
+    cmd: python recommender.py --bpr
+    deps:
+      - src/scripts/generaterecs.py
+      - recommender.py
+      - data/
+    outs:
+      - outputs/recs/bpr/
+
+  popular_eval:
+    cmd: python evaluator.py --popular
+    deps:
+      - src/scripts/evaluation.py
+      - outputs/recs/popular/ 
+      - data/
+    outs:
+      - outputs/plots/popular/  
+
+  implicitmf_eval:
+    cmd: python evaluator.py --implicitmf
+    deps:
+      - src/scripts/evaluation.py
+      - outputs/recs/implicitmf/ 
+      - data/
+    outs: 
+      - outputs/plots/implicitmf/   
+
+  itemknn_eval:
+    cmd: python evaluator.py --itemknn
+    deps:
+      - src/scripts/evaluation.py
+      - outputs/recs/itemknn/
+      - data/
+    outs:
+      - outputs/plots/itemknn/      
+
+  bpr_eval:
+    cmd: python evaluator.py --bpr
+    deps:
+      - src/scripts/evaluation.py
+      - outputs/recs/bpr/
+      - data/
+    outs:
+      - outputs/plots/bpr/ 
+
+  data_eval:
+    cmd: python evaluator.py --data
+    deps:
+      - src/scripts/data_evaluation.py
+      - data/
+    outs:
+      - outputs/data_stat/    
+
+
+

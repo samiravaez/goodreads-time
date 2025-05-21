@@ -1,0 +1,200 @@
+schema: '2.0'
+stages:
+  popular:
+    cmd: python recommender.py --popular
+    deps:
+    - path: data/
+      hash: md5
+      md5: 7d287db9e3d058b40322477aa8be10a0.dir
+      size: 10245160828
+      nfiles: 21
+    - path: recommender.py
+      hash: md5
+      md5: 135122926c23d98896a955ec5c2bf8d1
+      size: 1617
+    - path: src/scripts/generaterecs.py
+      hash: md5
+      md5: 976a400bc8f42a32bf99f683da1f43f9
+      size: 6828
+    outs:
+    - path: outputs/recs/popular/
+      hash: md5
+      md5: 2082ea5afdedf68e750139bb4cd95489.dir
+      size: 479455515
+      nfiles: 52
+  implicitmf:
+    cmd: python recommender.py --implicitmf
+    deps:
+    - path: data/
+      hash: md5
+      md5: 7d287db9e3d058b40322477aa8be10a0.dir
+      size: 10245160828
+      nfiles: 21
+    - path: recommender.py
+      hash: md5
+      md5: 135122926c23d98896a955ec5c2bf8d1
+      size: 1617
+    - path: src/scripts/generaterecs.py
+      hash: md5
+      md5: 976a400bc8f42a32bf99f683da1f43f9
+      size: 6828
+    outs:
+    - path: outputs/recs/implicitmf/
+      hash: md5
+      md5: 3e704be99485c669ae596c57bb222a45.dir
+      size: 6022115321
+      nfiles: 52
+  itemknn:
+    cmd: python recommender.py --itemknn
+    deps:
+    - path: data/
+      hash: md5
+      md5: 7d287db9e3d058b40322477aa8be10a0.dir
+      size: 10245160828
+      nfiles: 21
+    - path: recommender.py
+      hash: md5
+      md5: 135122926c23d98896a955ec5c2bf8d1
+      size: 1617
+    - path: src/scripts/generaterecs.py
+      hash: md5
+      md5: 976a400bc8f42a32bf99f683da1f43f9
+      size: 6828
+    outs:
+    - path: outputs/recs/itemknn/
+      hash: md5
+      md5: f0b9a08b560dbf3bc2b341af79368b97.dir
+      size: 6169073795
+      nfiles: 52
+  popular_eval:
+    cmd: python evaluator.py --popular
+    deps:
+    - path: data/
+      hash: md5
+      md5: 7d287db9e3d058b40322477aa8be10a0.dir
+      size: 10245160828
+      nfiles: 21
+    - path: outputs/recs/popular/
+      hash: md5
+      md5: 2082ea5afdedf68e750139bb4cd95489.dir
+      size: 479455515
+      nfiles: 52
+    - path: src/scripts/evaluation.py
+      hash: md5
+      md5: 7afd03bcbdb7d8ec8dc7e5a6d8180469
+      size: 13640
+    outs:
+    - path: outputs/plots/popular/
+      hash: md5
+      md5: 1f001e376a10b957919eeafb4c4581f5.dir
+      size: 1807555
+      nfiles: 5
+  implicitmf_eval:
+    cmd: python evaluator.py --implicitmf
+    deps:
+    - path: data/
+      hash: md5
+      md5: 7d287db9e3d058b40322477aa8be10a0.dir
+      size: 10245160828
+      nfiles: 21
+    - path: outputs/recs/implicitmf/
+      hash: md5
+      md5: 3e704be99485c669ae596c57bb222a45.dir
+      size: 6022115321
+      nfiles: 52
+    - path: src/scripts/evaluation.py
+      hash: md5
+      md5: 7afd03bcbdb7d8ec8dc7e5a6d8180469
+      size: 13640
+    outs:
+    - path: outputs/plots/implicitmf/
+      hash: md5
+      md5: afda97a2716b5cee72c1dd9a6a59645a.dir
+      size: 1879250
+      nfiles: 5
+  itemknn_eval:
+    cmd: python evaluator.py --itemknn
+    deps:
+    - path: data/
+      hash: md5
+      md5: 7d287db9e3d058b40322477aa8be10a0.dir
+      size: 10245160828
+      nfiles: 21
+    - path: outputs/recs/itemknn/
+      hash: md5
+      md5: f0b9a08b560dbf3bc2b341af79368b97.dir
+      size: 6169073795
+      nfiles: 52
+    - path: src/scripts/evaluation.py
+      hash: md5
+      md5: 7afd03bcbdb7d8ec8dc7e5a6d8180469
+      size: 13640
+    outs:
+    - path: outputs/plots/itemknn/
+      hash: md5
+      md5: bea55a92c6493500aa0c05f96b097c7a.dir
+      size: 1889711
+      nfiles: 5
+  bpr:
+    cmd: python recommender.py --bpr
+    deps:
+    - path: data/
+      hash: md5
+      md5: 7d287db9e3d058b40322477aa8be10a0.dir
+      size: 10245160828
+      nfiles: 21
+    - path: recommender.py
+      hash: md5
+      md5: 135122926c23d98896a955ec5c2bf8d1
+      size: 1617
+    - path: src/scripts/generaterecs.py
+      hash: md5
+      md5: 976a400bc8f42a32bf99f683da1f43f9
+      size: 6828
+    outs:
+    - path: outputs/recs/bpr/
+      hash: md5
+      md5: efdf1a3c276bfcd883a91f12d6733307.dir
+      size: 6466554689
+      nfiles: 52
+  bpr_eval:
+    cmd: python evaluator.py --bpr
+    deps:
+    - path: data/
+      hash: md5
+      md5: 7d287db9e3d058b40322477aa8be10a0.dir
+      size: 10245160828
+      nfiles: 21
+    - path: outputs/recs/bpr/
+      hash: md5
+      md5: efdf1a3c276bfcd883a91f12d6733307.dir
+      size: 6466554689
+      nfiles: 52
+    - path: src/scripts/evaluation.py
+      hash: md5
+      md5: 7afd03bcbdb7d8ec8dc7e5a6d8180469
+      size: 13640
+    outs:
+    - path: outputs/plots/bpr/
+      hash: md5
+      md5: 8af2515465abd56ad1ce310e5505dc9e.dir
+      size: 1869370
+      nfiles: 5
+  data_eval:
+    cmd: python evaluator.py --data
+    deps:
+    - path: data/
+      hash: md5
+      md5: 7d287db9e3d058b40322477aa8be10a0.dir
+      size: 10245160828
+      nfiles: 21
+    - path: src/scripts/data_evaluation.py
+      hash: md5
+      md5: d7edc63afa8bc5013716d97f4af7acab
+      size: 6267
+    outs:
+    - path: outputs/data_stat/
+      hash: md5
+      md5: 240f4a3a503bafea9c103f8922463095.dir
+      size: 20993
+      nfiles: 1
